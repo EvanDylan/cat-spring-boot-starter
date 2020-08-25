@@ -5,34 +5,28 @@ package org.rhine.cat.spring.boot.annotation;
  */
 public enum EnvEnum {
 
-    MIT("mit", "50"),
+    MIT("mit"),
 
-    TEST("test", "20"),
+    TEST("test"),
 
-    UAT("uat", "30"),
+    UAT("uat"),
 
-    PROD("prod", "40");
+    PROD("prod");
 
     String name;
 
-    String value;
+    EnvEnum(String name) {
+        this.name = name;
+    }
 
     public String getName() {
         return name;
     }
 
-    public String getValue() {
-        return value;
-    }
 
-    EnvEnum(String name, String value) {
-        this.name = name;
-        this.value = value;
-    }
-
-    public static EnvEnum parseByValue(String value) {
+    public static EnvEnum parseByValue(String name) {
         for (EnvEnum envEnum : EnvEnum.values()) {
-            if (envEnum.value.equalsIgnoreCase(value)) {
+            if (envEnum.name.equalsIgnoreCase(name)) {
                 return envEnum;
             }
         }

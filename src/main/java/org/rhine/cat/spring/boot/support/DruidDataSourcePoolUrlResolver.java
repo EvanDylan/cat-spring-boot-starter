@@ -1,10 +1,11 @@
-package org.rhine.cat.spring.boot.internal.mybatis;
+package org.rhine.cat.spring.boot.support;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import org.rhine.cat.spring.boot.support.spi.DataSourcePoolUrlResolver;
 
 import javax.sql.DataSource;
 
-public class DruidDataSourcePoolUrlResolveProvider implements DataSourcePoolUrlResolveProvider {
+public class DruidDataSourcePoolUrlResolver implements DataSourcePoolUrlResolver {
 
     private static final String CLASS_NAME = "com.alibaba.druid.pool.DruidDataSource";
 

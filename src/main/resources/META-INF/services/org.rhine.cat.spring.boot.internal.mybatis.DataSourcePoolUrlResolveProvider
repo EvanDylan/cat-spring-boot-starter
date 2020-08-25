@@ -1,2 +1,0 @@
-org.rhine.cat.spring.boot.internal.mybatis.DruidDataSourcePoolUrlResolveProvider
-org.rhine.cat.spring.boot.internal.mybatis.TomcatDataSourcePoolUrlResolveProvider

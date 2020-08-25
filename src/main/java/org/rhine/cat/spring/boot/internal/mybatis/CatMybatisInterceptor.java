@@ -15,6 +15,7 @@ import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.ResultHandler;
 import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.type.TypeHandlerRegistry;
+import org.rhine.cat.spring.boot.support.DataSourceUrlResolverSupport;
 
 import javax.sql.DataSource;
 import java.text.DateFormat;
@@ -53,7 +54,7 @@ public class CatMybatisInterceptor implements Interceptor {
         Configuration configuration = mappedStatement.getConfiguration();
         Environment environment = configuration.getEnvironment();
         DataSource dataSource = environment.getDataSource();
-        return DataSourceUrlResolve.resolve(dataSource);
+        return DataSourceUrlResolverSupport.resolve(dataSource);
     }
 
     private String getMethodName(MappedStatement mappedStatement) {

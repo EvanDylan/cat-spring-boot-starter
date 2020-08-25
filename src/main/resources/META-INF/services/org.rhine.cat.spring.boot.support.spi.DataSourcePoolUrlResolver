@@ -1,0 +1,2 @@
+org.rhine.cat.spring.boot.support.DruidDataSourcePoolUrlResolver
+org.rhine.cat.spring.boot.support.TomcatDataSourcePoolUrlResolver

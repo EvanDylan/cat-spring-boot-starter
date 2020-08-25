@@ -1,8 +1,10 @@
-package org.rhine.cat.spring.boot.internal.mybatis;
+package org.rhine.cat.spring.boot.support;
+
+import org.rhine.cat.spring.boot.support.spi.DataSourcePoolUrlResolver;
 
 import javax.sql.DataSource;
 
-public class TomcatDataSourcePoolUrlResolveProvider implements DataSourcePoolUrlResolveProvider {
+public class TomcatDataSourcePoolUrlResolver implements DataSourcePoolUrlResolver {
 
     private static final String CLASS_NAME = "org.apache.tomcat.jdbc.pool.DataSource";
 
